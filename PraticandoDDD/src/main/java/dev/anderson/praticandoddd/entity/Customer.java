@@ -46,4 +46,8 @@ public class Customer {
     public void setAddress(Address address) {
         this.address = address;
     }
+
+    public String toString(){
+        return this.id + ", " + this.name + ", " + this.address.toString() + ", " + this.active;
+    }
 }
