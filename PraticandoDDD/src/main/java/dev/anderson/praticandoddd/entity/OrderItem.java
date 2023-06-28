@@ -9,6 +9,7 @@ public class OrderItem {
         this.id = id;
         this.name = name;
         this.price = price;
+        this.validate();
     }
 
     public String toString(){
@@ -17,5 +18,17 @@ public class OrderItem {
 
     public Double getPrice() {
         return price;
+    }
+
+    public void validate(){
+        if(this.name == null || this.name.trim().equals("")){
+            throw new IllegalArgumentException("Nome do item é obrigatório");
+        }
+        if (this.id == null || this.id.trim().equals("")){
+            throw new IllegalArgumentException("Id do item é obrigatório");
+        }
+        if (this.price == null || this.price <= 0){
+            throw new IllegalArgumentException("Preço do item é obrigatório");
+        }
     }
 }

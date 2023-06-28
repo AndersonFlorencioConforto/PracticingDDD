@@ -11,6 +11,7 @@ public class Order {
         this.id = id;
         this.customerId = customerId;
         this.items = items;
+        this.validate();
     }
 
     public String toString() {
@@ -23,5 +24,17 @@ public class Order {
                 .mapToDouble(OrderItem::getPrice)
                 .sum();
 
+    }
+
+    public void validate(){
+        if(this.id == null || this.id.trim().equals("")){
+            throw new IllegalArgumentException("Id do pedido é obrigatório");
+        }
+        if(this.customerId == null || this.customerId.trim().equals("")){
+            throw new IllegalArgumentException("Id do cliente é obrigatório");
+        }
+        if(this.items == null || this.items.isEmpty()){
+            throw new IllegalArgumentException("Itens do pedido é obrigatório");
+        }
     }
 }
