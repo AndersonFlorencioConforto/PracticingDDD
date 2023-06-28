@@ -47,6 +47,14 @@ public class Customer {
         this.address = address;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
     public String toString(){
         return this.id + ", " + this.name + ", " + this.address.toString() + ", " + this.active;
     }
