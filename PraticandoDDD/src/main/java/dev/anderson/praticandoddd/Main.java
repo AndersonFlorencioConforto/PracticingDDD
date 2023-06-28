@@ -22,7 +22,7 @@ public class Main {
 
         System.out.println(customer.toString());
         System.out.println(order.toString());
-        System.out.println(order.amount());
+        System.out.println(order.total());
 
     }
 }

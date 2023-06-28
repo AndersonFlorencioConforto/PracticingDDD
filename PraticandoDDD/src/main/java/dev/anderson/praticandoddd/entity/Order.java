@@ -6,11 +6,13 @@ public class Order {
     private String id;
     private String customerId;
     private List<OrderItem> items;
+    private Double total;
 
     public Order(String id, String customerId, List<OrderItem> items) {
         this.id = id;
         this.customerId = customerId;
         this.items = items;
+        this.total = this.total();
         this.validate();
     }
 
@@ -18,7 +20,7 @@ public class Order {
         return this.id + ", " + this.customerId + ", " + this.items.toString();
     }
 
-    public Double amount() {
+    public Double total() {
         return this.items
                 .stream()
                 .mapToDouble(OrderItem::getPrice)
