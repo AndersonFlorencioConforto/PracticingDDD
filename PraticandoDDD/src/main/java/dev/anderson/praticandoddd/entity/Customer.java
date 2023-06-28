@@ -1,10 +1,11 @@
 package dev.anderson.praticandoddd.entity;
 
+//Entidade focada em negócio , diferente de entidade de banco de dados ORM que é focada em persistência
 public class Customer {
 
     private String id;
     private String name;
-    private String address;
+    private Address address;
     private boolean active = false;
 
     public Customer(String id, String name) {
@@ -21,7 +22,7 @@ public class Customer {
 
     //regra de negócio
     public void activate(){
-        if (this.address == null || this.address.trim().equals("")){
+        if (this.address == null){
             throw new IllegalArgumentException("Endereço do cliente é obrigatório");
         }
         this.active = true;
@@ -41,5 +42,8 @@ public class Customer {
         }
     }
 
-
+    //Não tem problema ter um setAddress pois ele é um value object, ou seja, sempre vai receber um Address.
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 }
