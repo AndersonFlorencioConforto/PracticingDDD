@@ -45,12 +45,28 @@ public class OrderTest {
         var expectedId = "123";
         var expectedCustomerId = "123";
 
-        var expectedItem1 = new OrderItem("123", "item 1", 10.00);
-        var expectedItem2 = new OrderItem("123", "item 2", 20.00);
+        var expectedItem1 = new OrderItem("123", "item 1", 10.00, "123", 2);
+        var expectedItem2 = new OrderItem("123", "item 2", 20.00, "123", 2);
 
         var expectedItems = List.of(expectedItem1, expectedItem2);
         var order = new Order(expectedId, expectedCustomerId, expectedItems);
 
-        Assertions.assertEquals(30.0, order.total());
+        Assertions.assertEquals(60.0, order.total());
+    }
+
+    @Test
+    void givenAInvalidQuantityWhenCreateThenThrowException() {
+        var expectedId = "123";
+        var expectedCustomerId = "123";
+
+        var expectedError = Assertions.assertThrows(IllegalArgumentException.class,() -> {
+            var expectedItem1 = new OrderItem("123", "item 1", 10.00, "123", 0);
+            var expectedItem2 = new OrderItem("123", "item 2", 20.00, "123", 2);
+
+            var expectedItems = List.of(expectedItem1, expectedItem2);
+            new Order(expectedId, expectedCustomerId, expectedItems);
+        });
+
+        Assertions.assertEquals("Quantidade do item é obrigatório", expectedError.getMessage());
     }
 }

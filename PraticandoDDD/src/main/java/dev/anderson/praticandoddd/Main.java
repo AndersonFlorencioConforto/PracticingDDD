@@ -14,9 +14,9 @@ public class Main {
         customer.setAddress(address);
         customer.activate();
 
-        var item1 = new OrderItem("1", "Item 1", 10.0);
-        var item2 = new OrderItem("2", "Item 2", 20.0);
-        var item3 = new OrderItem("3", "Item 3", 30.0);
+        var item1 = new OrderItem("1", "Item 1", 10.0, "1", 1);
+        var item2 = new OrderItem("2", "Item 2", 20.0, "2", 2);
+        var item3 = new OrderItem("3", "Item 3", 30.0, "3", 3);
 
         var order = new Order("1", "123", List.of(item1, item2, item3));
 

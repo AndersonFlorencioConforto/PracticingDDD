@@ -23,7 +23,7 @@ public class Order {
     public Double total() {
         return this.items
                 .stream()
-                .mapToDouble(OrderItem::getPrice)
+                .mapToDouble(OrderItem::orderItemTotal)
                 .sum();
 
     }
@@ -37,6 +37,9 @@ public class Order {
         }
         if(this.items == null || this.items.isEmpty()){
             throw new IllegalArgumentException("Itens do pedido é obrigatório");
+        }
+        if (this.items.stream().anyMatch(item -> item.getQuantity() <= 0)){
+            throw new IllegalArgumentException("Quantidade do item é obrigatório");
         }
     }
 }
