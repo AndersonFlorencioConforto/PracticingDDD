@@ -1,6 +1,6 @@
 package dev.anderson.praticandoddd;
 
-import dev.anderson.praticandoddd.entity.Address;
+import dev.anderson.praticandoddd.entity.AddressValueObject;
 import dev.anderson.praticandoddd.entity.Customer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -48,7 +48,7 @@ public class CustomerTest {
         var expectedNumber = "123";
         var expectedCity = "São Paulo";
         var expectedZipCode = "12345678";
-        var expectedAddress = new Address(expectedStreet, expectedNumber, expectedCity, expectedZipCode);
+        var expectedAddress = new AddressValueObject(expectedStreet, expectedNumber, expectedCity, expectedZipCode);
 
         customer.setAddress(expectedAddress);
 
@@ -81,7 +81,7 @@ public class CustomerTest {
         var expectedNumber = "123";
         var expectedCity = "São Paulo";
         var expectedZipCode = "12345678";
-        var expectedAddress = new Address(expectedStreet, expectedNumber, expectedCity, expectedZipCode);
+        var expectedAddress = new AddressValueObject(expectedStreet, expectedNumber, expectedCity, expectedZipCode);
 
         customer.setAddress(expectedAddress);
 

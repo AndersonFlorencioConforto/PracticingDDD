@@ -5,7 +5,7 @@ public class Customer {
 
     private String id;
     private String name;
-    private Address address;
+    private AddressValueObject address;
     private boolean active = false;
 
     public Customer(String id, String name) {
@@ -43,8 +43,8 @@ public class Customer {
     }
 
     //Não tem problema ter um setAddress pois ele é um value object, ou seja, sempre vai receber um Address.
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setAddress(AddressValueObject addressValueObject) {
+        this.address = addressValueObject;
     }
 
     public String getName() {

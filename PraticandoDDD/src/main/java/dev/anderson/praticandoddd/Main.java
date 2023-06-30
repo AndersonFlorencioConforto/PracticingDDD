@@ -1,6 +1,6 @@
 package dev.anderson.praticandoddd;
 
-import dev.anderson.praticandoddd.entity.Address;
+import dev.anderson.praticandoddd.entity.AddressValueObject;
 import dev.anderson.praticandoddd.entity.Customer;
 import dev.anderson.praticandoddd.entity.Order;
 import dev.anderson.praticandoddd.entity.OrderItem;
@@ -10,7 +10,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         var customer = new Customer("123", "Anderson");
-        var address = new Address("Rua teste", "74", "São Paulo", "123456");
+        var address = new AddressValueObject("Rua teste", "74", "São Paulo", "123456");
         customer.setAddress(address);
         customer.activate();
 

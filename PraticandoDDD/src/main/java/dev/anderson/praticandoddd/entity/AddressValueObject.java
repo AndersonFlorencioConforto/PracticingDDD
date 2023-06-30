@@ -1,6 +1,6 @@
 package dev.anderson.praticandoddd.entity;
 
-public class Address {
+public class AddressValueObject {
 
     private String street;
     private String number;
@@ -8,7 +8,7 @@ public class Address {
     private String city;
 
 
-    public Address(String street, String number, String city, String zipCode) {
+    public AddressValueObject(String street, String number, String city, String zipCode) {
         this.street = street;
         this.number = number;
         this.city = city;
