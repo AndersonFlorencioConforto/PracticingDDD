@@ -19,7 +19,8 @@ public class OrderServiceTest {
         var order = new Order("123", "123", List.of(item1));
         var order2 = new Order("123", "123", List.of(item2));
 
-        var total = OrderService.total(List.of(order, order2));
+        Order[] orderArray = {order, order2};
+        var total = OrderService.total(orderArray);
         Assertions.assertEquals(500.0, total);
 
     }
