@@ -1,4 +1,4 @@
-package dev.anderson.praticandoddd;
+package dev.anderson.praticandoddd.entity;
 
 import dev.anderson.praticandoddd.entity.AddressValueObject;
 import dev.anderson.praticandoddd.entity.Customer;

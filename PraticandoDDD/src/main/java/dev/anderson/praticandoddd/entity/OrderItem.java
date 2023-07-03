@@ -42,5 +42,8 @@ public class OrderItem {
         if (this.quantity == null || this.quantity <= 0){
             throw new IllegalArgumentException("Quantidade do item é obrigatório");
         }
+        if (this.productId == null || this.productId.trim().equals("")){
+            throw new IllegalArgumentException("Id do produto é obrigatório");
+        }
     }
 }
