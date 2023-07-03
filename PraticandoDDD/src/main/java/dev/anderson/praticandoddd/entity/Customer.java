@@ -6,6 +6,7 @@ public class Customer {
     private String id;
     private String name;
     private AddressValueObject address;
+    private int rewards = 0;
     private boolean active = false;
 
     public Customer(String id, String name) {
@@ -40,6 +41,18 @@ public class Customer {
         if (this.id == null || this.id.trim().equals("")){
             throw new IllegalArgumentException("Id do cliente é obrigatório");
         }
+    }
+
+    public void addRewards(double value){
+        this.rewards += value;
+    }
+
+    public int getRewards() {
+        return rewards;
+    }
+
+    public String getId() {
+        return id;
     }
 
     //Não tem problema ter um setAddress pois ele é um value object, ou seja, sempre vai receber um Address.

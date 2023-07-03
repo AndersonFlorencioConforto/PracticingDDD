@@ -30,10 +30,10 @@ public class OrderServiceTest {
     void givenAValidCommandWhenCreateOrderShouldAddRewardsCustomer() {
 
         var customer = new Customer("123", "Anderson");
-        var item1 = new OrderItem("123", "item 1", 100.00, "123", 1);
+        var item1 = new OrderItem("123", "item 1", 100.00, "123", 3);
         var order = OrderService.placeOrder(customer, List.of(item1));
 
-        Assertions.assertEquals(50, customer.getRewards());
-        Assertions.assertEquals(500.0, order.total());
+        Assertions.assertEquals(150, customer.getRewards());
+        Assertions.assertEquals(300.0, order.total());
     }
 }
