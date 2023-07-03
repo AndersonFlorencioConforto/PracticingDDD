@@ -91,4 +91,17 @@ public class CustomerTest {
         customer.deactivate();
         Assertions.assertFalse(customer.isActive());
     }
+
+    @Test
+    void givenAValidCustomerWhenCallsAddRewardPointsThenAddRewardPoints() {
+        var expectedId = "123";
+        var expectedName = "Anderson";
+        var customer = new Customer(expectedId, expectedName);
+
+        Assertions.assertEquals(0, customer.getRewards());
+
+        var expectedPoints = 10;
+        customer.addRewards(expectedPoints);
+        Assertions.assertEquals(expectedPoints, customer.getRewards());
+    }
 }
