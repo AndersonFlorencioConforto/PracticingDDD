@@ -13,6 +13,10 @@ public class Product {
         this.validate();
     }
 
+    public static Product with(String id, String name, double price){
+        return new Product(id, name, price);
+    }
+
     public void validate(){
         if(this.id == null || this.id.trim().equals("")){
             throw new IllegalArgumentException("Id do cliente é obrigatório");
@@ -33,6 +37,10 @@ public class Product {
     public void changePrice(double price){
         this.price = price;
         this.validate();
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getName() {
