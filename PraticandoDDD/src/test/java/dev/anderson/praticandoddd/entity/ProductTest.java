@@ -1,6 +1,6 @@
 package dev.anderson.praticandoddd.entity;
 
-import dev.anderson.praticandoddd.entity.Product;
+import dev.anderson.praticandoddd.domain.entity.Product;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

@@ -1,6 +1,7 @@
 package dev.anderson.praticandoddd.service;
 
-import dev.anderson.praticandoddd.entity.Product;
+import dev.anderson.praticandoddd.domain.entity.Product;
+import dev.anderson.praticandoddd.domain.service.ProductService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;

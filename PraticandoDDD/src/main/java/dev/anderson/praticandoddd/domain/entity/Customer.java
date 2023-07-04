@@ -1,4 +1,4 @@
-package dev.anderson.praticandoddd.entity;
+package dev.anderson.praticandoddd.domain.entity;
 
 //Entidade focada em negócio , diferente de entidade de banco de dados ORM que é focada em persistência
 public class Customer {

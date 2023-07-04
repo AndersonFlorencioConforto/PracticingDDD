@@ -1,8 +1,9 @@
 package dev.anderson.praticandoddd.service;
 
-import dev.anderson.praticandoddd.entity.Customer;
-import dev.anderson.praticandoddd.entity.Order;
-import dev.anderson.praticandoddd.entity.OrderItem;
+import dev.anderson.praticandoddd.domain.entity.Customer;
+import dev.anderson.praticandoddd.domain.entity.Order;
+import dev.anderson.praticandoddd.domain.entity.OrderItem;
+import dev.anderson.praticandoddd.domain.service.OrderService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

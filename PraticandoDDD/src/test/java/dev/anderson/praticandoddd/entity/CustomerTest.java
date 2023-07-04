@@ -1,7 +1,7 @@
 package dev.anderson.praticandoddd.entity;
 
-import dev.anderson.praticandoddd.entity.AddressValueObject;
-import dev.anderson.praticandoddd.entity.Customer;
+import dev.anderson.praticandoddd.domain.entity.AddressValueObject;
+import dev.anderson.praticandoddd.domain.entity.Customer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

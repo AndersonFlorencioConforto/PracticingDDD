@@ -1,6 +1,6 @@
-package dev.anderson.praticandoddd.service;
+package dev.anderson.praticandoddd.domain.service;
 
-import dev.anderson.praticandoddd.entity.Product;
+import dev.anderson.praticandoddd.domain.entity.Product;
 
 import java.util.List;
 

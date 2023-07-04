@@ -1,4 +1,4 @@
-package dev.anderson.praticandoddd.entity;
+package dev.anderson.praticandoddd.domain.entity;
 
 public class Product {
 
