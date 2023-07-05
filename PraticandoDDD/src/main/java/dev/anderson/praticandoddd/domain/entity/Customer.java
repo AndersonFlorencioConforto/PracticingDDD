@@ -68,6 +68,10 @@ public class Customer {
         return active;
     }
 
+    public AddressValueObject getAddress() {
+        return address;
+    }
+
     public String toString(){
         return this.id + ", " + this.name + ", " + this.address.toString() + ", " + this.active;
     }

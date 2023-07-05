@@ -31,6 +31,22 @@ public class AddressValueObject {
         }
     }
 
+    public String getStreet() {
+        return street;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
     public String toString() {
         return this.street + ", " + this.number + ", " + this.city + ", " + this.zipCode;
     }
